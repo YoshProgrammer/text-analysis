@@ -18,3 +18,12 @@ end
 puts item_counts("bill joe bob")
 puts item_counts("james dill richard")
 
+
+
+# QUESTIONS
+# I implemented the .split("") method in line 8 but I still am having trouble understanding how I would pass in
+# the output of the first method as the input for the second method.
+# If you look at https://github.com/JoshEnplug/text-analysis/commit/0fe85e1d73228ec9769134288b2f55d02fa48bb4
+# that shows a couple different methods I was trying, but none of them successfully worked
+# I get that I need to first run string_split so it turns it into an array, that then the each function can run
+# and count the frequency of the characters just unsure how to implement that.
