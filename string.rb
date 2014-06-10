@@ -1,13 +1,14 @@
 
-def string_split(list)
-  list.split("")
+def string_split(array)
+  array.split("")
 end
 
-print string_split("bob" "jane" "louis")  
+print string_split("bob jane louis")  
 
 #puts "bob".split("")
 
 def item_counts(array)
+  array = string_split(array)
   counts = {}                                   
 
   array.each do |item|
@@ -20,12 +21,19 @@ def item_counts(array)
   counts                                        # This returns the "counts" hash
 end
 
-puts item_counts([1,2,1,2,1]) 
-puts item_counts(["a","b","a","b","a","ZZZ"]) 
-puts item_counts([]) 
-puts item_counts(["hi", "hi", "hi"]) 
-puts item_counts([true, nil, "dinosaur"]) 
-puts item_counts(["a","a","A","A"]) 
+#puts item_counts([1,2,1,2,1]) 
+#puts item_counts(["a","b","a","b","a","ZZZ"]) 
+#puts item_counts([]) 
+#puts item_counts(["hi", "hi", "hi"]) 
+#puts item_counts([true, nil, "dinosaur"]) 
+#puts item_counts(["a","a","A","A"]) 
+
+#def final_input(array)
+#  final_input(string_split(array), item_counts(array))
+#end
+
+
+#print final_input("bobjaneus")
 
 #p item_counts([1,2,1,2,1]) == {1 => 3, 2 => 2}
 #p item_counts(["a","b","a","b","a","ZZZ"]) == {"a" => 3, "b" => 2, "ZZZ" => 1}
@@ -33,3 +41,10 @@ puts item_counts(["a","a","A","A"])
 #p item_counts(["hi", "hi", "hi"]) == {"hi" => 3}
 #p item_counts([true, nil, "dinosaur"]) == {true => 1, nil => 1, "dinosaur" => 1}
 #p item_counts(["a","a","A","A"]) == {"a" => 2, "A" => 2}
+
+
+
+# Questions #####
+# On line 11, I attempted to pass in the 'String_Split(array)' result as the definition of array'
+# On line 31-36, I tried passing it in as a new defined method like I had seen in Exercise_36 in the katas
+# Can you point me in the right direction again?
