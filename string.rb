@@ -1,17 +1,22 @@
+def sanitize(string)
+  string.downcase
+end
+#print sanitize("BILL JANE")
 
-def string_split(array)
-  array.split("")
+
+def string_split(string)
+  sanitize(string).split('')
 end
 
-print string_split("bob jane louis")  
+#print string_split("BILL JANE")
+#print string_split("bob jane louis")  
 
 #puts "bob".split("")
 
-def item_counts(array)
-  array = string_split(array)
+def item_counts(string)
   counts = {}                                   
 
-  array.each do |item|
+  string.each do |item|
     if counts.has_key?(item)                    # if item already has a key, then add to the running total
       counts[item] = counts[item] + 1
     else
@@ -28,12 +33,13 @@ end
 #puts item_counts([true, nil, "dinosaur"]) 
 #puts item_counts(["a","a","A","A"]) 
 
-#def final_input(array)
-#  final_input(string_split(array), item_counts(array))
-#end
+
+def final_input(string)
+  item_counts(string_split(string))
+end
 
 
-#print final_input("bobjaneus")
+puts final_input("bob jane loou gggg jane jsejfjgjgjsdjggwefkgjjgpgj[qgjorejgpqoe")
 
 #p item_counts([1,2,1,2,1]) == {1 => 3, 2 => 2}
 #p item_counts(["a","b","a","b","a","ZZZ"]) == {"a" => 3, "b" => 2, "ZZZ" => 1}

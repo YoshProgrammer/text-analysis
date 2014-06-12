@@ -5,7 +5,7 @@ end
 
 def item_counts(array)
   counts = {}                                   
-  array.split("").each do |item|
+  array.downcase.split("").each do |item|
     if counts.has_key?(item)                    # if item already has a key, then add to the running total
       counts[item] = counts[item] + 1
     else
@@ -15,7 +15,7 @@ def item_counts(array)
   counts                                        # This returns the "counts" hash
 end
 
-puts item_counts("bill joe bob")
+puts item_counts("BILL joe bob")
 puts item_counts("james dill richard")
 
 

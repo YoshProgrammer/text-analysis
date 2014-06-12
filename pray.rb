@@ -22,18 +22,30 @@ def item_counts(data)
     if counts.has_key?(item)                    # if item already has a key, then add to the running total
       counts[item] += 1 
     else
-      counts[item] = 1                          # if this is the first instance of the item, just assign value of 1                                                                                                               
-    end                                                                                                                                              
+      counts[item] = 1                        # if this is the first instance of the item, just assign value of 1                                                                                                               
+    end                                                                                                                                                 
+  end 
+    sum = 0
+    counts.values.each {|a| sum+=a}
+      puts sum
+  data.each do |value|
+    total = (counts.values[0] / sum)
   end
+  print total
+  end 
   counts.each do |key, value|
-      puts "The key is '#{key}' and the value is '#{value}'"                                        # This returns the "counts" hash
+    puts "The key is '#{key}' and the value is '#{value}'"                                        # This returns the "counts" hash
   end
-  sum = 0
-  counts.values.each {|a| sum+=a}
-  puts "The overall sum of the values are '#{sum}'"
-
-  #puts (counts.values[10] / 324)             #Why does this return 0?
 end
+
+#def percent(value)
+#  value.each do |item|
+#    total = counts[item] / sum  
+#  end
+# print total
+#end
+
+
 
 def final_input(string)
   item_counts(string_split(string))

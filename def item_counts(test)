@@ -1,0 +1,5 @@
+def item_counts(test)
+	counts = {}
+
+	test.each do |item|
+	if counts.
